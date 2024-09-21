@@ -1,0 +1,18 @@
+::tasklist
+::-> to show all the services running in windows
+::tasklist /? -> for more info
+
+::Image Name -> these are the name of applications name which are running
+::PID -> or port id assigned to communicate with the applications and windows\
+::Session Name -> this shows the type of sessions running
+::Session -> 0 indicate windows session(applications running before login), 
+			 1 indicate user session(applications which runs after login, mostly custom applications)
+
+::taskkill
+::-> operate to kill running process with name as image name
+::taskkill /? -> for more info
+
+
+
+taskkill /f /im application.exe
+:: /f -> forcefully, /im -> imagename

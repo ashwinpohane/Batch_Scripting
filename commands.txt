@@ -1,0 +1,55 @@
+#### batch commands
+echo -> to print in cmd --> echo This is print line
+pause -> to pause the program in cmd --> pause
+start -> to start application --> start application.exe
+Title -> to set title of cmd --> Title This is batch scripting cmd
+move -> to move file from one loc to another loc --> move "loc1" "target_loc"
+set -> to set variable with value --> set var1=Enter the name: 
+mkdir -> to make new directory --> mkdir "path\to\folder\folder_name"
+for -> to loop --> for %%i in (*.*) do echo %%i
+>> -> to export --> for /r %%i in (*) do echo %%i >> file.txt
+| -> pipe command (to pass output of previous command to next command) --> tasklist | findstr app.exe
+|| -> it is use as elif to pipe command (it is use with pipe command) --> tasklist |findstr app.exe || start app.exe 
+timeout -> countdown the time in seconds --> timeout /t 10
+call -> to run another bat file --> call "path\to\file.bat"
+del -> to delete files from directory --> del "path\to\files.format"
+REM, :: -> to comment the line --> REM this is comment, :: this is comment
+
+
+#### shortcuts
+* -> all
+/d -> directory --> /d "path to application" application.exe
+/p -> get user input --> set /p input=Enter your name: 
+/a -> use to do basic integer arithmatic --> set /a
+/b -> use to list only filename -> dir /b
+/s -> use to list all files from set directory as well as all child(inside) directory files --> dir /s
+/i -> use to make case insensitive --> if /i %input%==y goto above
+/r -> iterate through the folder and all subfolders, i.e. recursively.
+%% -> placeholder for a path/filepath
+/t -> use to set time --> /t 10
+/nobreak -> operation cannot be terminated with any key --> timeout /t 10 /nobreak
+
+
+#### format
+1. To open excel file (first specify application location followed by file location)
+start /d <path\to\application> <application.exe> <complete\path\to\file.format>
+Eg. start /d start /d "C:\Program Files\Google\Chrome\Application" chrome.exe "C:\Users\User\Downloads\RD-Reels video Ai-280424-110751.pdf"
+---------------------------------------------------------
+2. To move file
+move <path\of\file.format> <target\path>
+Eg. move "E:\OFF WORK\Project\end to end 2\lstm_model.ipynb" "E:\OFF WORK\Project\end to end 2\saved_model"
+---------------------------------------------------------
+3. To move multiple files (to move file that name ends with '-copy')
+move <path\of\files\*-copy.format> <target\path>
+---------------------------------------------------------
+4. To make new folder
+mkdir <path\to\folder\folder_name>
+
+5. To make new folder, name and path given by user
+set /p folder_name=Enter folder name
+set /p folder_loc=Enter folder loc
+mkdir %folder_loc%\%folder_name%
+---------------------------------------------------------
+6. To loop
+for %%i in (*.*) do echo %%i
+---------------------------------------------------------

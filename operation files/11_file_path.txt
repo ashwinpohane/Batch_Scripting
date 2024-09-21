@@ -1,0 +1,14 @@
+10_loop_file_name_and_save_in_excel.bat:@echo off
+11_find_string_in_any_file.bat:@echo off
+1_open_URL.bat:@echo off
+2_open_URL_incognito.bat:@echo off
+3_open_application.bat:@echo off
+4_open_file.bat:@echo off
+5.1_move_file.bat:@echo off
+5.2_move_multiple_files.bat:@echo off
+6_user_input_in_variable_in loop.bat:@echo off
+7_user_input_yes_no.bat:@echo off
+8.1_create_new_folder.bat:@echo off
+8.2_create_new_folder_manual_loc_name.bat:@echo off
+9_To_loop_through.bat:@echo off
+notepad.txt:@echo off
